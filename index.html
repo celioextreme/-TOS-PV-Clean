@@ -2,15 +2,40 @@
    
 <div><!-- Disable right click -->
 <script>
-jQuery(document).ready(function(){
-    jQuery(document).bind("contextmenu",function(e){
-        return false;
-    });
-});
+document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
 </script>
-<?php
+
+<script>
+document.onkeypress = function (event) {
+event = (event || window.event);
+if (event.keyCode == 123) {return false;}
+if (event.keyCode == 93) {return false;}
+if (event.keyCode == 85) {return false;}
+if (event.keyCode == 80) {return false;}
+if (event.keyCode == 44) {return false;}
+if (event.keyCode == 73) {return false;}
 }
-add_action('wp_footer', 'disable_right_click');
+document.onmousedown = function (event) {
+event = (event || window.event);
+if (event.keyCode == 123) {return false;}
+if (event.keyCode == 93) {return false;}
+if (event.keyCode == 85) {return false;}
+if (event.keyCode == 80) {return false;}
+if (event.keyCode == 44) {return false;}
+if (event.keyCode == 73) {return false;}
+}
+document.onkeydown = function (event) {
+event = (event || window.event);
+if (event.keyCode == 123) {return false;}
+if (event.keyCode == 93) {return false;}
+if (event.keyCode == 85) {return false;}
+if (event.keyCode == 80) {return false;}
+if (event.keyCode == 44) {return false;}
+if (event.keyCode == 73) {return false;}
+}
+</script>
 <!-- code ends -->
 
 <!-- Meta Pixel Code -->
